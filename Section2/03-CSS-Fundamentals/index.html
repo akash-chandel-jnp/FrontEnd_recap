@@ -5,7 +5,7 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<header>
+		<header class="main-header">
 			<h1>📘 The Code Magazine</h1>
 			<nav>
 				<a href="blog.html">Go to Blog</a>
@@ -25,7 +25,7 @@
 					alt="LauraJones Image"
 					width="50"
 				/>
-				<p>
+				<p id="author">
 					Posted by <strong>Laura Jones</strong> on Monday, June 21st
 					2027
 				</p>
@@ -95,7 +95,7 @@
 
 		<aside>
 			<h4>Related Post</h4>
-			<ul>
+			<ul class="related">
 				<li>
 					<img
 						src="./images/related-1.jpg"
@@ -103,7 +103,7 @@
 						width="50px"
 					/>
 					<a href="">How to learn web development</a>
-					<p>by Amit Srivastava</p>
+					<p class="related-author">by Amit Srivastava</p>
 				</li>
 				<li>
 					<img
@@ -112,7 +112,7 @@
 						width="50px"
 					/>
 					<a href="">The Unknown powers of CSS</a>
-					<p>by Brian Patel</p>
+					<p class="related-author">by Brian Patel</p>
 				</li>
 				<li>
 					<img
@@ -120,10 +120,13 @@
 						alt="codes_image"
 						width="50px"
 					/>
-					<a href="">Why JavaScript is Awesome</a>
+					<a href="#">Why JavaScript is Awesome</a>
+					<p class="related-author">by Amrinder Saxena</p>
 				</li>
 			</ul>
 		</aside>
-		<footer><p>Copyright &copy; 2027 by The code Magazine</p></footer>
+		<footer>
+			<p id="copyright">Copyright &copy; 2027 by The code Magazine</p>
+		</footer>
 	</body>
 </html>

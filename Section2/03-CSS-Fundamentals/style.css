@@ -5,9 +5,16 @@ h4,
 li,
 p {
 	font-family: sans-serif;
+	color: #444;
 }
+
+h1,
+h2,
+h3 {
+	color: #2cb7d6fc;
+}
+
 h1 {
-	color: blue;
 	font-size: 26px;
 	text-transform: uppercase;
 	font-style: italic;
@@ -40,6 +47,43 @@ footer p {
 	text-align: right;
 }
 
-article header p {
+/* article header p {
 	font-style: italic;
+} */
+
+#author {
+	font-style: italic;
+	font-size: 18px;
 }
+
+#copyright {
+	font-size: 16px;
+	text-align: right;
+}
+.related-author {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/* remove bullet points */
+/* ul {
+	list-style: none;
+} */
+
+.related {
+	list-style: none;
+}
+
+.main-header {
+	background-color: #f7f7f7;
+}
+
+aside {
+	background-color: #f7f7f7;
+	border-top: 5px solid #2cb7d6fc;
+	border-bottom: 5px solid #2cb7d6fc;
+}
+
+/* body {
+	background-color: rgb(221, 221, 243);
+} */
