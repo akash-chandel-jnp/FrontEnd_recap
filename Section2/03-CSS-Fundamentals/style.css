@@ -87,3 +87,33 @@ aside {
 /* body {
 	background-color: rgb(221, 221, 243);
 } */
+
+/* .first-li {
+	font-weight: bold;
+} */
+
+/* pseudo class */
+li:first-child {
+	font-weight: bold;
+}
+li:last-child {
+	font-style: italic;
+}
+
+/* li:nth-child(2) {
+	color: red;
+} */
+
+/* li:nth-child(odd) {
+	color: green;
+} */
+
+/* misconception about pseudo class:  */
+article p:first-child {
+	/*trying to select to selet the p element if it is the first child element of the article element*/
+	color: red;
+} /* The above will not work as p  is not the first child of the article element , rather header is the first child */
+
+article p:last-child {
+	color: red;
+}
