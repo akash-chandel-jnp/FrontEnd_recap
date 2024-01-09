@@ -1,13 +1,10 @@
-h1,
-h2,
-h3,
-h4,
-li,
-p {
-	font-family: sans-serif;
+body {
 	color: #444;
+	font-family: sans-serif;
+	border-top: 10px solid #1098ad;
 }
 
+/* Note : not all the properties are inherited from parent, only the one related to font size, weight, color etc are inherited. */
 h1,
 h2,
 h3 {
@@ -116,4 +113,20 @@ article p:first-child {
 
 article p:last-child {
 	color: red;
+}
+
+a:link {
+	color: #1098ad;
+	text-decoration: none;
+}
+
+a:visited {
+	/* color: #777; */
+	color: #1098ad;
+}
+
+a:hover {
+	color: orangered;
+}
+a:active {
 }
