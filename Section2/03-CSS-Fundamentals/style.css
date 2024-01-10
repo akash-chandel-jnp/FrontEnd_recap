@@ -1,7 +1,38 @@
+/* Global Reset */
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	color: #444;
 	font-family: sans-serif;
 	border-top: 10px solid #1098ad;
+}
+
+.main-header {
+	background-color: #f7f7f7;
+	/* padding: 20px;
+	padding-left: 40px;
+	padding-right: 40px; */
+	padding: 20px 40px;
+	margin-bottom: 60px;
+	height: 80px;
+}
+
+article {
+	margin-bottom: 60px;
+}
+.post-header {
+	margin-bottom: 40px;
+}
+
+aside {
+	background-color: #f7f7f7;
+	border-top: 5px solid #2cb7d6fc;
+	border-bottom: 5px solid #2cb7d6fc;
+	padding: 50px 0;
+	width: 500px;
 }
 
 /* Note : not all the properties are inherited from parent, only the one related to font size, weight, color etc are inherited. */
@@ -19,14 +50,24 @@ h1 {
 
 h2 {
 	font-size: 40px;
+	margin-bottom: 30px;
 }
 p {
 	font-size: 22px;
 	line-height: 1.5;
+	margin-bottom: 15px;
 }
 
+ol,
+ul {
+	margin-left: 50px;
+	margin-bottom: 20px;
+}
 h3 {
 	font-family: sans-serif;
+	font-size: 30px;
+	margin-bottom: 20px;
+	margin-top: 40px;
 }
 
 h4 {
@@ -37,6 +78,12 @@ h4 {
 
 li {
 	font-size: 20px;
+	/* padding: 5px; */
+	margin-bottom: 10px;
+}
+
+li:last-child {
+	margin-bottom: 0;
 }
 
 footer p {
@@ -69,16 +116,6 @@ footer p {
 
 .related {
 	list-style: none;
-}
-
-.main-header {
-	background-color: #f7f7f7;
-}
-
-aside {
-	background-color: #f7f7f7;
-	border-top: 5px solid #2cb7d6fc;
-	border-bottom: 5px solid #2cb7d6fc;
 }
 
 /* body {
@@ -129,4 +166,18 @@ a:hover {
 	color: orangered;
 }
 a:active {
+}
+
+.post-img {
+	width: 100%;
+	height: auto;
+}
+
+.container {
+	width: 800px;
+	/* margin-left: auto;
+	margin-right: auto; */
+	/* margin on both side set to auto to have same margin on both side and hence our page will be centred. */
+	/* shorthand */
+	margin: 0 auto;
 }
