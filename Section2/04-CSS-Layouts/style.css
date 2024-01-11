@@ -2,6 +2,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 /* page sections */
@@ -40,8 +41,7 @@ aside {
 	background-color: #f7f7f7;
 	border-top: 5px solid #2cb7d6fc;
 	border-bottom: 5px solid #2cb7d6fc;
-	padding: 50px 0;
-	width: 500px;
+	padding: 50px 40px;
 }
 
 /* Note : not all the properties are inherited from parent, only the one related to font size, weight, color etc are inherited. */
@@ -101,6 +101,7 @@ h4 {
 	font-size: 20px;
 	text-transform: uppercase;
 	text-align: center;
+	margin-bottom: 30px;
 }
 
 li {
@@ -138,6 +139,7 @@ footer p {
 
 .related {
 	list-style: none;
+	margin-left: 0;
 }
 
 /* body {
