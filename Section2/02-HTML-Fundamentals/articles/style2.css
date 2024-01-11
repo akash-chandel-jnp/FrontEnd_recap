@@ -28,6 +28,12 @@ a:active {
 	padding: 15px;
 }
 
+/* pricing */
+strong {
+	font-size: 30px;
+	font-weight: bolder;
+}
+
 .shoes-image {
 	margin-bottom: 10px;
 }
@@ -85,9 +91,14 @@ h2 {
 	position: relative;
 }
 
-.more-info {
+/* .more-info {
 	margin-bottom: 10px;
 	/* above code not work for link element  */
+/* } */
+
+.more-info {
+	margin-bottom: 10px;
+	display: inline-block;
 }
 
 /* creating SALE label on the article using html and then styling it */
@@ -105,10 +116,38 @@ h2 {
 /* creating SALE label on the article using pseudo element only */
 h2::after {
 	content: "SALE";
+	color: white;
+	font-size: 20px;
 	background-color: red;
 	position: absolute;
 	top: -20px;
-	left: -20px;
+	left: -45px;
 	letter-spacing: 5px;
-	padding: 10px;
+	display: inline-block;
+	padding: 5px 10px;
+	/* width: 80px; */
+	/* text-align: center; */
+}
+
+.colors-choice div {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+	border: 2px solid black;
+}
+div .red {
+	background-color: red;
+}
+div .blue {
+	background-color: blue;
+}
+div .green {
+	background-color: green;
+}
+div .white {
+	background-color: white;
+}
+div .purple {
+	background-color: purple;
 }
