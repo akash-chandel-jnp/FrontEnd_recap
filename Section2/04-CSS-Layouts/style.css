@@ -249,6 +249,16 @@ nav {
 	float: right;
 }
 
-.clear {
+/* ways to prevent height collapsing of the parent element becaues of float property of the all the child element */
+
+/* Method 1: create one empty div element in html file  in the parent div and clear float :both in css */
+/* .clear {
 	clear: both;
+} */
+
+/* method 2: create pseudo element in the parent using css directly and clear:both and set display: block as clear property applty app;ies only on block item and by default pseudo element has inline property , and also do declare the content property even if empty as it is necessary for pseudo element */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: block;
 }
