@@ -82,9 +82,33 @@ h2 {
 	width: 825px;
 	margin: 50px auto;
 	border: 5px solid #040404;
+	position: relative;
 }
 
 .more-info {
 	margin-bottom: 10px;
 	/* above code not work for link element  */
+}
+
+/* creating SALE label on the article using html and then styling it */
+/* .container p:first-child {
+	display: inline-block;
+	background-color: red;
+	color: white;
+	padding: 5px;
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	letter-spacing: 5px;
+} */
+
+/* creating SALE label on the article using pseudo element only */
+h2::after {
+	content: "SALE";
+	background-color: red;
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	letter-spacing: 5px;
+	padding: 10px;
 }
