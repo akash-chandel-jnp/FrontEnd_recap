@@ -57,7 +57,23 @@ h1 {
 h2 {
 	font-size: 40px;
 	margin-bottom: 30px;
+	/* background-color: orange; */
+	position: relative;
 }
+/* creating label "TOP" */
+h2::after {
+	content: "TOP";
+	display: inline-block;
+	background-color: yellow;
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 5px 10px;
+	position: absolute;
+	top: -15px;
+	right: -30px;
+}
+
 p {
 	font-size: 22px;
 	line-height: 1.5;
