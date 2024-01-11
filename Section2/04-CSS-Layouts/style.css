@@ -211,7 +211,7 @@ nav a:link:last-child {
 }
 
 .container {
-	width: 800px;
+	width: 1200px;
 	/* margin-left: auto;
 	margin-right: auto; */
 	/* margin on both side set to auto to have same margin on both side and hence our page will be centred. */
@@ -261,4 +261,21 @@ nav {
 	content: "";
 	clear: both;
 	display: block;
+}
+
+article {
+	/* background-color: green; */
+	width: 825px;
+	float: left;
+}
+
+aside {
+	/* background-color: red; */
+	width: 300px;
+	float: right;
+}
+
+footer {
+	/* background-color: yellow; */
+	clear: both;
 }
