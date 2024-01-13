@@ -272,6 +272,28 @@ nav a:link:last-child {
 	display: block;
 }
 
+/* Bringing related post to the sidebar by using flex */
+.row {
+	display: flex;
+	align-items: flex-start;
+	gap: 75px;
+	margin-bottom: 60px;
+}
+aside {
+	/* DEFAULTS */
+	/* flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto; */
+
+	flex: 0 0 300px;
+}
+article {
+	/* flex: 0 0 825px; */
+	/* to automatically calclate the dimension i.e. remaining space and allot to this section simply put flex-grow :1 */
+	flex-grow: 1;
+	margin-bottom: 0;
+}
+
 /*   
 
 ----------------------------------------------------------  FLOAT  --------------------------------------------------------------------------  */
