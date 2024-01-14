@@ -1,16 +1,24 @@
-/* Global Reset */
 * {
+	/* border-top: 10px solid #1098ad; */
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-/* page sections */
+/* PAGE SECTIONS */
 body {
 	color: #444;
 	font-family: sans-serif;
+
 	border-top: 10px solid #1098ad;
 	position: relative;
+}
+
+.container {
+	width: 1200px;
+	/* margin-left: auto;
+	margin-right: auto; */
+	margin: 0 auto;
 }
 
 .main-header {
@@ -19,19 +27,19 @@ body {
 	padding-left: 40px;
 	padding-right: 40px; */
 	padding: 20px 40px;
-	margin-bottom: 60px;
+	/* margin-bottom: 60px; */
 	/* height: 80px; */
-	/* overflow: scroll; */
 }
 
-#author {
-	font-style: italic;
+nav {
 	font-size: 18px;
+	/* text-align: center; */
 }
 
 article {
-	margin-bottom: 60px;
+	/* margin-bottom: 60px; */
 }
+
 .post-header {
 	margin-bottom: 40px;
 	/* position: relative; */
@@ -39,18 +47,16 @@ article {
 
 aside {
 	background-color: #f7f7f7;
-	border-top: 5px solid #2cb7d6fc;
-	border-bottom: 5px solid #2cb7d6fc;
+	border-top: 5px solid #1098ad;
+	border-bottom: 5px solid #1098ad;
 	padding: 50px 40px;
 }
 
-/* Note : not all the properties are inherited from parent, only the one related to font size, weight, color etc are inherited. */
-
-/* small sections */
+/* SMALLER ELEMENTS */
 h1,
 h2,
 h3 {
-	color: #2cb7d6fc;
+	color: #1098ad;
 }
 
 h1 {
@@ -62,36 +68,9 @@ h1 {
 h2 {
 	font-size: 40px;
 	margin-bottom: 30px;
-	/* background-color: orange; */
-	position: relative;
-}
-/* creating label "TOP" */
-h2::after {
-	content: "TOP";
-	display: inline-block;
-	background-color: yellow;
-	color: black;
-	font-size: 20px;
-	font-weight: bold;
-	padding: 5px 10px;
-	position: absolute;
-	top: -15px;
-	right: -30px;
 }
 
-p {
-	font-size: 22px;
-	line-height: 1.5;
-	margin-bottom: 15px;
-}
-
-ol,
-ul {
-	margin-left: 50px;
-	margin-bottom: 20px;
-}
 h3 {
-	font-family: sans-serif;
 	font-size: 30px;
 	margin-bottom: 20px;
 	margin-top: 40px;
@@ -104,78 +83,85 @@ h4 {
 	margin-bottom: 30px;
 }
 
+p {
+	font-size: 22px;
+	line-height: 1.5;
+	margin-bottom: 15px;
+}
+
+ul,
+ol {
+	margin-left: 50px;
+	margin-bottom: 20px;
+}
+
 li {
 	font-size: 20px;
-	/* padding: 5px; */
 	margin-bottom: 10px;
+	/* display: inline; */
 }
 
 li:last-child {
 	margin-bottom: 0;
 }
 
-footer p {
+/* footer p {
 	font-size: 16px;
-	text-align: right;
-}
+  } */
 
 /* article header p {
 	font-style: italic;
-} */
+  } */
+
+#author {
+	font-style: italic;
+	font-size: 18px;
+}
 
 #copyright {
 	font-size: 16px;
-	text-align: right;
 }
+
 .related-author {
 	font-size: 18px;
 	font-weight: bold;
 }
 
-/* remove bullet points */
 /* ul {
 	list-style: none;
-} */
+  } */
 
 .related {
 	list-style: none;
 	margin-left: 0;
 }
 
-/* body {
-	background-color: rgb(221, 221, 243);
-} */
+body {
+	/* background-color: orangered; */
+}
 
 /* .first-li {
 	font-weight: bold;
-} */
+  } */
 
-/* pseudo class */
 li:first-child {
 	font-weight: bold;
 }
+
 li:last-child {
 	font-style: italic;
 }
 
-/* li:nth-child(2) {
-	color: red;
-} */
+li:nth-child(even) {
+	/* color: red; */
+}
 
-/* li:nth-child(odd) {
-	color: green;
-} */
-
-/* misconception about pseudo class:  */
+/* Misconception: this won't work! */
 article p:first-child {
-	/*trying to select to selet the p element if it is the first child element of the article element*/
-	color: red;
-} /* The above will not work as p  is not the first child of the article element , rather header is the first child */
-
-article p:last-child {
 	color: red;
 }
 
+/* Styling links */
 a:link {
 	color: #1098ad;
 	text-decoration: none;
@@ -188,10 +174,15 @@ a:visited {
 
 a:hover {
 	color: orangered;
+	font-weight: bold;
+	text-decoration: underline orangered;
 }
+
 a:active {
-	color: black;
+	background-color: black;
+	font-style: italic;
 }
+/* LVHA */
 
 .post-img {
 	width: 100%;
@@ -201,39 +192,126 @@ a:active {
 nav a:link {
 	/* background-color: orangered;
 	margin: 20px;
-	padding: 20px; */
-	/* display: block; */
+	padding: 20px;
+  
+	display: block; */
 
 	margin-right: 30px;
 	display: inline-block;
 }
+
 nav a:link:last-child {
 	margin-right: 0;
 }
 
-.container {
-	width: 1200px;
-	/* margin-left: auto;
-	margin-right: auto; */
-	/* margin on both side set to auto to have same margin on both side and hence our page will be centred. */
-	/* shorthand */
-	margin: 0 auto;
-	/* position: relative; */
-}
-
-.like-btn {
+button {
 	font-size: 22px;
 	padding: 20px;
 	cursor: pointer;
+
 	position: absolute;
-	/* top: 0;
-	left: 0; */
+	/* top: 50px;
+	left: 50px; */
 	bottom: 50px;
 	right: 50px;
 }
 
-/* -------------------------------------- FLEXBOX --------------------------------------------------- */
+h1::first-letter {
+	font-style: normal;
+	margin-right: 5px;
+}
 
+h3 + p::first-line {
+	/* color: red; */
+}
+
+h2 {
+	/* background-color: orange; */
+	position: relative;
+}
+
+h2::before {
+	content: "TOP";
+	background-color: #ffe70e;
+	color: #444;
+	font-size: 16px;
+	font-weight: bold;
+	display: inline-block;
+	padding: 5px 10px;
+	position: absolute;
+	top: -10px;
+	right: -25px;
+}
+
+/* Resolving conflicts */
+/* #copyright {
+	color: red;
+  }
+  
+  .copyright {
+	color: blue;
+  }
+  
+  .text {
+	color: yellow;
+  }
+  
+  footer p {
+	color: green !important;
+  } */
+
+/* nav a:link,
+  nav p {
+	font-size: 18px;
+  } */
+
+/* FLOATS */
+/*
+  .author-img {
+	float: left;
+	margin-bottom: 20px;
+  }
+  
+  .author {
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+  }
+  
+  h1 {
+	float: left;
+  }
+  
+  nav {
+	float: right;
+  }
+  
+  .clear {
+	clear: both;
+  }
+  
+  .clearfix::after {
+	clear: both;
+	content: "";
+	display: block;
+  }
+  
+  article {
+	width: 825px;
+	float: left;
+  }
+  
+  aside {
+	width: 300px;
+	float: right;
+  }
+  
+  footer {
+	clear: both;
+  }
+  */
+
+/* FLEXBOX */
 .main-header {
 	display: flex;
 	align-items: center;
@@ -246,7 +324,7 @@ nav a:link:last-child {
 	margin-bottom: 15px;
 }
 
-#author {
+.author {
 	margin-bottom: 0;
 	margin-left: 15px;
 }
@@ -257,14 +335,8 @@ nav a:link:last-child {
 	gap: 20px;
 	margin-bottom: 30px;
 }
-.related-author {
-	margin-bottom: 0;
-	font-size: 14px;
-	font-weight: normal;
-	font-style: italic;
-}
 
-.related-link {
+.related-link:link {
 	font-size: 17px;
 	font-weight: bold;
 	font-style: normal;
@@ -272,77 +344,56 @@ nav a:link:last-child {
 	display: block;
 }
 
-/* Bringing related post to the sidebar by using flex */
-.row {
+.related-author {
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+/* FLEXBOX LAYOUT */
+/* .row {
 	display: flex;
 	align-items: flex-start;
 	gap: 75px;
 	margin-bottom: 60px;
-}
-aside {
-	/* DEFAULTS */
-	/* flex-grow: 0;
-	flex-shrink: 1;
-	flex-basis: auto; */
-
-	flex: 0 0 300px;
-}
-article {
-	/* flex: 0 0 825px; */
-	/* to automatically calclate the dimension i.e. remaining space and allot to this section simply put flex-grow :1 */
-	flex-grow: 1;
+  }
+  
+  article {
+	flex: 1;
 	margin-bottom: 0;
+  }
+  
+  aside {
+	
+	DEFAULTS:
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+  
+	flex: 0 0 300px;
+  } */
+
+/* CSS GRID LAYOUT */
+.container {
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	column-gap: 75px;
+	row-gap: 60px;
+	align-items: start;
 }
 
-/*   
-
-----------------------------------------------------------  FLOAT  --------------------------------------------------------------------------  */
-
-/* 
-.author-img {
-	float: left;
-	margin-bottom: 20px;
-} */
-
-/* #author {
-	float: left;
-	margin-top: 10px;
-	margin-left: 20px;
-} */
-
-/* 
-h1 {
-	float: left;
+.main-header {
+	/* grid-column: 1 / span 2; */
+	grid-column: 1 / -1;
 }
-nav {
-	float: right;
-} */
 
-/* ways to prevent height collapsing of the parent element becaues of float property of the all the child element */
+article {
+}
 
-/* Method 1: create one empty div element in html file  in the parent div and clear float :both in css */
-/* .clear {
-	clear: both;
-} */
+aside {
+}
 
-/* method 2: create pseudo element in the parent using css directly and clear:both and set display: block as clear property applty app;ies only on block item and by default pseudo element has inline property , and also do declare the content property even if empty as it is necessary for pseudo element */
-
-/* .clearfix::after {
-	content: "";
-	clear: both;
-	display: block;
-} */
-
-/* article {
-	width: 825px;
-	float: left;
-} */
-
-/* aside {
-	width: 300px;
-	float: right;
-} */
-
-/* footer {
-	clear: both;
-} */
+footer {
+	grid-column: 1 / -1;
+}
