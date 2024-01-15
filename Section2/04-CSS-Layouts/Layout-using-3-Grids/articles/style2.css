@@ -142,13 +142,13 @@ div .purple {
 }
 
 /* ------------------------------------ FLEXBOX ------------------------ */
-.row {
+/* .row {
 	display: flex;
 	align-items: flex-start;
 	gap: 40px;
 	margin-top: 0;
 	flex: 1;
-}
+} */
 
 .price-shipping {
 	display: flex;
@@ -166,6 +166,20 @@ div .purple {
 .sec-2,
 .sec-3 {
 	flex: 1;
+}
+
+/* ---------------------  GRID  ------------------------- */
+.container {
+	display: grid;
+	grid-template-columns: 250px 1fr 1fr;
+	column-gap: 40px;
+}
+
+.product-title {
+	grid-column: 1/-1;
+}
+button {
+	grid-column: 1/-1;
 }
 
 /* ---------------------------------    FLOAT     ---------------------- */
