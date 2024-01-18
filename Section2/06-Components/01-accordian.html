@@ -37,22 +37,56 @@
 			.accordian {
 				width: 700px;
 				margin: 100px auto;
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
 			}
 
 			.item {
+				box-shadow: 0 0px 32px rgba(0, 0, 0, 0.1);
+				padding: 24px;
+				display: grid;
+				grid-template-columns: auto 1fr auto;
+				column-gap: 24px;
+				row-gap: 32px;
+				align-items: center;
 			}
+
 			.number,
 			.text {
 				font-size: 24px;
 				font-weight: 500;
-				color: #087f5b;
+				/* color: #087f5b; */
 			}
 
+			.number {
+				color: #ced4da;
+			}
+
+			/* ----------------------------------------------------------- */
+			/* Bringing the hidden part back if it has class of 'open' */
+			.open {
+				border-top: 4px solid #087f5b;
+			}
+			.open .hidden-box {
+				display: block;
+			}
+
+			.open .number,
+			.open .text,
+			.open .icon {
+				color: #087f5b;
+			}
+			/* ------------------------------------------------- */
 			.icon {
 				width: 24px;
 				height: 24px;
 			}
+
+			/* hiding the part of the item. */
 			.hidden-box {
+				grid-column: 2;
+				display: none;
 			}
 
 			.hidden-box p {
@@ -72,6 +106,51 @@
 	<body>
 		<div class="accordian">
 			<div class="item">
+				<p class="number">01</p>
+				<p class="text">Where are these chairs assembled?</p>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="icon"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="m19.5 8.25-7.5 7.5-7.5-7.5"
+					/>
+				</svg>
+				<div class="hidden-box">
+					<p>
+						Lorem ipsum dolor sit amet consectetur, adipisicing
+						elit. Voluptas reiciendis quod vitae dolores officia
+						quisquam, laudantium commodi itaque odio porro optio
+						possimus numquam vel adipisci.
+					</p>
+					<ul>
+						<li>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit.
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit.
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="item open">
 				<p class="number">02</p>
 				<p class="text">How long do I have to return my chair?</p>
 				<svg
@@ -93,8 +172,7 @@
 						Lorem ipsum dolor sit amet consectetur, adipisicing
 						elit. Voluptas reiciendis quod vitae dolores officia
 						quisquam, laudantium commodi itaque odio porro optio
-						possimus numquam vel adipisci. Odio reiciendis
-						necessitatibus amet eum?
+						possimus numquam vel adipisci.
 					</p>
 					<ul>
 						<li>
@@ -103,11 +181,60 @@
 						</li>
 						<li>
 							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Non, quos!
+							elit
 						</li>
 						<li>
 							Lorem ipsum dolor sit amet consectetur adipisicing
 							elit.
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="item">
+				<p class="number">02</p>
+				<p class="text">Do you ship to the countries outside of EU?</p>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="icon"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="m19.5 8.25-7.5 7.5-7.5-7.5"
+					/>
+				</svg>
+				<div class="hidden-box">
+					<p>
+						Lorem ipsum dolor sit amet consectetur, adipisicing
+						elit. Voluptas reiciendis quod vitae dolores officia
+						quisquam, laudantium commodi itaque odio porro optio
+						possimus numquam vel adipisci.
+					</p>
+					<ul>
+						<li>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit.
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit.
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit
 						</li>
 					</ul>
 				</div>
